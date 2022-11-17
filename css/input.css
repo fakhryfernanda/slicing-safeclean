@@ -10,9 +10,24 @@
         @apply text-4xl font-bold;
     }
     h2 {
-        @apply text-[28px] font-bold;
+        @apply text-[28px] font-bold leading-tight;
     }
     h4 {
         @apply font-bold;
+    }
+}
+
+@layer components {
+    .shop-button {
+        @apply bg-main_red flex items-center gap-5 mx-auto p-[10px] pr-7 rounded-full;
+    }
+    .shop-button > div {
+        @apply bg-secondary_red w-fit p-3 rounded-full;
+    }
+    .shop-button > div > img {
+        @apply w-6 h-6;
+    }
+    .shop-button span {
+        @apply text-sm font-light uppercase text-white;
     }
 }
