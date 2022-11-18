@@ -4,7 +4,10 @@
 
 @layer base {
     .container {
-        @apply px-5;
+        @apply
+        mx-auto
+        /* flex flex-col justify-center items-center */
+        max-sm:px-5;
     }
     h1 {
         @apply text-4xl font-bold;
@@ -12,17 +15,26 @@
     h2 {
         @apply text-[28px] font-bold leading-tight;
     }
+    h3 {
+        @apply text-2xl font-bold;
+    }
     h4 {
         @apply font-bold;
     }
 }
 
 @layer components {
+    .screen-check {
+        @apply sm:bg-red-200 md:bg-purple-200 lg:bg-lime-200 xl:bg-sky-200;
+    }
     .shop-button {
-        @apply bg-main_red flex items-center gap-5 mx-auto p-[10px] pr-7 rounded-full;
+        @apply
+        bg-main_red flex items-center gap-5 mx-auto p-[10px] pr-7 rounded-full
+        hover:bg-[rgb(242,51,25)] active:scale-[0.98]
     }
     .shop-button > div {
-        @apply bg-secondary_red w-fit p-3 rounded-full;
+        @apply
+        bg-secondary_red w-fit p-3 rounded-full
     }
     .shop-button > div > img {
         @apply w-6 h-6;
